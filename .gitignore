@@ -4,16 +4,15 @@ __pycache__/
 *$py.class
 *.so
 .Python
+*.egg-info/
+dist/
+build/
+
+# Virtual Environment
 venv/
 env/
 ENV/
-.venv
-
-# Data and outputs
-data/
-audit/
-logs/
-scenarios/*/
+.venv/
 
 # IDE
 .vscode/
@@ -25,14 +24,31 @@ scenarios/*/
 # OS
 .DS_Store
 Thumbs.db
+desktop.ini
 
-# Streamlit
-.streamlit/
+# Streamlit (keep secrets out!)
+.streamlit/secrets.toml
 
-# Models (downloaded by sentence-transformers)
+# Runtime Generated Files
+audit/*.jsonl
+logs/*.log
+data/*.json
+data/*.db
+
+# Scenarios - User uploaded PDFs (can be large)
+scenarios/**/*.pdf
+
+# Models cache (sentence-transformers downloads ~80MB)
+# Streamlit will download these on first run
+.cache/
 models/
 
 # Temporary files
 *.tmp
 *.bak
-*.log
+
+# Keep directory structure but ignore contents
+!audit/.gitkeep
+!logs/.gitkeep
+!data/.gitkeep
+!scenarios/.gitkeep

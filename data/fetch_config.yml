@@ -1,0 +1,30 @@
+# RegDelta Fetch Configuration
+# Real-world regulatory document scenarios
+
+scenarios:
+  - name: "PCI DSS v4.0 vs v4.0.1"
+    documents:
+      - label: "PCI DSS v4.0 (Mar 2022)"
+        bucket: "baseline"
+        url: "https://www.commerce.uwo.ca/pdf/PCI-DSS-v4_0.pdf"
+      - label: "PCI DSS v4.0.1 (Jun 2024)"
+        bucket: "new"
+        url: "https://www.middlebury.edu/sites/default/files/2025-01/PCI-DSS-v4_0_1.pdf"
+
+  - name: "RBI KYC — Master Direction vs Nov 6, 2024 Amendment"
+    documents:
+      - label: "KYC Directions, 2016 (updated; baseline)"
+        bucket: "baseline"
+        url: "https://www.rbi.org.in/commonman/Upload/English/Notification/PDFs/MD18KYCF6E92C82E1E1419D87323E3869BC9F13.pdf"
+      - label: "KYC Amendment Circular (Nov 6, 2024)"
+        bucket: "new"
+        url: "https://www.pdicai.org/Docs/RBI-2024-2025-87_811202415750569.pdf"
+
+  - name: "SEBI FPI Additional Disclosures — Aug 24, 2023 vs Mar 20, 2024"
+    documents:
+      - label: "SEBI FPI Disclosures (Aug 24, 2023)"
+        bucket: "baseline"
+        url: "https://www.skylinerta.com/pdf_file/51_1175162897_SEBICircular-MandatingadditionaldisclosuresbyForeignPortfolioInvestors%28FPIs%29-24.08.2023.pdf"
+      - label: "Amendment to FPI Disclosures (Mar 20, 2024)"
+        bucket: "new"
+        url: "https://www.cse-india.com/upload/upload/Mar_200324_2.pdf"
