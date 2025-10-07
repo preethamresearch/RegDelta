@@ -1,0 +1,150 @@
+# RBI (Reserve Bank of India) Demo Control Catalog
+# Sample controls for RBI compliance (KYC, AML, IT Framework)
+
+controls:
+  - control_id: "RBI-KYC-1"
+    domain: "Customer Due Diligence"
+    title: "Customer Identification Program (CIP)"
+    description: "Implement robust customer identification procedures including collection and verification of identity documents for all new customers before establishing banking relationship."
+    owner: "Compliance Team"
+    evidence_examples:
+      - "KYC policy document"
+      - "Customer onboarding checklists"
+      - "Document verification logs"
+      - "Risk-based KYC procedures"
+
+  - control_id: "RBI-KYC-2"
+    domain: "Customer Due Diligence"
+    title: "Periodic KYC updates for existing customers"
+    description: "Conduct periodic updates of KYC information for existing customers based on risk categorization (High risk: 2 years, Medium: 8 years, Low: 10 years)."
+    owner: "Compliance Team"
+    evidence_examples:
+      - "KYC update schedules"
+      - "Customer risk categorization matrix"
+      - "KYC renewal tracking reports"
+
+  - control_id: "RBI-AML-1"
+    domain: "Anti-Money Laundering"
+    title: "Suspicious Transaction Monitoring"
+    description: "Implement transaction monitoring systems to identify and report suspicious transactions to Financial Intelligence Unit (FIU-IND) within prescribed timelines."
+    owner: "AML Team"
+    evidence_examples:
+      - "STR/CTR filing logs"
+      - "Transaction monitoring rules documentation"
+      - "Monthly STR statistics"
+      - "FIU-IND acknowledgments"
+
+  - control_id: "RBI-AML-2"
+    domain: "Anti-Money Laundering"
+    title: "Cash Transaction Reporting"
+    description: "Report all cash transactions above ₹10 lakhs and series of cash transactions below ₹10 lakhs appearing connected to FIU-IND within 15 days."
+    owner: "AML Team"
+    evidence_examples:
+      - "CTR submission reports"
+      - "Cash transaction monitoring logs"
+      - "Compliance certificates"
+
+  - control_id: "RBI-IT-1"
+    domain: "Information Security"
+    title: "Information Security Policy & Framework"
+    description: "Establish comprehensive information security policy approved by Board covering confidentiality, integrity, availability of systems and data."
+    owner: "CISO"
+    evidence_examples:
+      - "Board-approved IS policy"
+      - "Annual IS policy review minutes"
+      - "Policy distribution and acknowledgment records"
+
+  - control_id: "RBI-IT-2"
+    domain: "Information Security"
+    title: "Cyber Security Framework implementation"
+    description: "Implement cyber security framework covering baseline security controls, real-time threat monitoring, incident response, and business continuity."
+    owner: "Security Operations"
+    evidence_examples:
+      - "Cyber security framework document"
+      - "SOC monitoring dashboards"
+      - "Incident response plan"
+      - "Annual cyber security audit reports"
+
+  - control_id: "RBI-IT-3"
+    domain: "IT Governance"
+    title: "IT Steering Committee"
+    description: "Constitute an IT Strategy Committee of the Board to review IT strategy, investments, and major IT projects."
+    owner: "CTO"
+    evidence_examples:
+      - "IT Steering Committee charter"
+      - "Quarterly committee meeting minutes"
+      - "IT strategy approval documents"
+
+  - control_id: "RBI-BC-1"
+    domain: "Business Continuity"
+    title: "Business Continuity Plan (BCP)"
+    description: "Develop and maintain comprehensive Business Continuity Plan covering critical business functions with Recovery Time Objective (RTO) and Recovery Point Objective (RPO) defined."
+    owner: "Business Continuity Manager"
+    evidence_examples:
+      - "BCP document"
+      - "Business Impact Analysis (BIA)"
+      - "Annual BCP testing reports"
+      - "DR site readiness certificates"
+
+  - control_id: "RBI-BC-2"
+    domain: "Business Continuity"
+    title: "Disaster Recovery testing"
+    description: "Conduct disaster recovery drills at least twice a year and document outcomes, lessons learned, and improvement actions."
+    owner: "IT Operations"
+    evidence_examples:
+      - "DR test schedules"
+      - "DR drill reports with RTO/RPO measurements"
+      - "Corrective action tracking"
+
+  - control_id: "RBI-OUT-1"
+    domain: "Outsourcing"
+    title: "Outsourcing Risk Management Framework"
+    description: "Establish framework for managing outsourcing arrangements including due diligence, service level agreements, and right to audit clauses."
+    owner: "Vendor Management"
+    evidence_examples:
+      - "Outsourcing policy"
+      - "Vendor due diligence reports"
+      - "SLA monitoring dashboards"
+      - "Annual vendor audit reports"
+
+  - control_id: "RBI-OUT-2"
+    domain: "Outsourcing"
+    title: "Material outsourcing arrangement approval"
+    description: "Obtain Board approval for all material outsourcing arrangements and ensure risk mitigation measures are in place."
+    owner: "Vendor Management"
+    evidence_examples:
+      - "Board approval for material outsourcing"
+      - "Risk assessment reports"
+      - "Exit strategy documentation"
+
+  - control_id: "RBI-DATA-1"
+    domain: "Data Protection"
+    title: "Data localization and storage"
+    description: "Ensure all payment system data is stored only in India with end-to-end encryption and strict access controls."
+    owner: "Data Privacy Officer"
+    evidence_examples:
+      - "Data residency compliance certificates"
+      - "Data flow diagrams"
+      - "Encryption implementation documentation"
+
+  - control_id: "RBI-FRAUD-1"
+    domain: "Fraud Risk Management"
+    title: "Fraud monitoring and prevention"
+    description: "Implement fraud detection and prevention mechanisms including transaction limits, velocity checks, and customer alerts for high-risk transactions."
+    owner: "Fraud Prevention Team"
+    evidence_examples:
+      - "Fraud monitoring rules"
+      - "Monthly fraud statistics"
+      - "Customer alert configurations"
+      - "Fraud investigation reports"
+
+  - control_id: "RBI-AUDIT-1"
+    domain: "Internal Audit"
+    title: "IS Audit and compliance review"
+    description: "Conduct annual Information Systems audit by CISA-certified auditors covering all critical IT systems and processes."
+    owner: "Internal Audit"
+    evidence_examples:
+      - "Annual IS audit plan"
+      - "IS audit reports"
+      - "Management action plans for audit findings"
+      - "Auditor certifications"

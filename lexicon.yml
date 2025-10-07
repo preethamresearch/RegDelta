@@ -1,0 +1,110 @@
+# RegDelta Lexicon
+# Rule-based patterns for obligation extraction
+
+# Modal verbs indicating obligations (must/shall/required/etc.)
+modal_phrases:
+  mandatory:
+    - "must"
+    - "shall"
+    - "required to"
+    - "is required"
+    - "are required"
+    - "will be required"
+    - "obliged to"
+    - "obligated to"
+    - "mandatory"
+    - "compulsory"
+
+  prohibitions:
+    - "must not"
+    - "shall not"
+    - "prohibited"
+    - "forbidden"
+    - "not permitted"
+    - "not allowed"
+    - "cannot"
+    - "may not"
+
+  recommended:
+    - "should"
+    - "recommended"
+    - "advised to"
+    - "encouraged to"
+    - "ought to"
+    - "may consider"
+
+# Severity keywords (trigger High/Medium/Low classification)
+severity_keywords:
+  high:
+    - "prohibited"
+    - "forbidden"
+    - "must not"
+    - "shall not"
+    - "immediately"
+    - "critical"
+    - "penalty"
+    - "fine"
+    - "suspend"
+    - "revoke"
+    - "terminate"
+    - "non-compliance"
+    - "breach"
+
+  medium:
+    - "must"
+    - "shall"
+    - "required"
+    - "mandatory"
+    - "within"
+    - "deadline"
+    - "timeframe"
+    - "compliance"
+
+  low:
+    - "should"
+    - "recommended"
+    - "advised"
+    - "encouraged"
+    - "may"
+    - "optional"
+
+# Deadline patterns (boost severity if time-bound)
+deadline_patterns:
+  - "within \\d+ days?"
+  - "within \\d+ weeks?"
+  - "within \\d+ months?"
+  - "by \\d{1,2}[/-]\\d{1,2}[/-]\\d{2,4}"
+  - "before \\d{1,2}[/-]\\d{1,2}[/-]\\d{2,4}"
+  - "no later than"
+  - "not later than"
+  - "on or before"
+  - "immediately"
+  - "forthwith"
+
+# Stop phrases (exclude these from obligations - typically boilerplate)
+stop_phrases:
+  - "table of contents"
+  - "annexure"
+  - "appendix"
+  - "glossary"
+  - "definition"
+  - "abbreviation"
+  - "introduction"
+  - "background"
+  - "preamble"
+  - "reference"
+  - "contact us"
+  - "for further information"
+  - "page \\d+"
+
+# Section headings that likely contain obligations
+obligation_sections:
+  - "requirements"
+  - "obligations"
+  - "compliance"
+  - "controls"
+  - "measures"
+  - "procedures"
+  - "guidelines"
+  - "standards"
+  - "regulations"

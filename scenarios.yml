@@ -1,0 +1,28 @@
+# Sample Scenarios Configuration
+# Define scenarios with document URLs for automated fetching
+
+scenarios:
+  - name: "pci_4.0_to_4.0.1"
+    description: "PCI DSS version 4.0 to 4.0.1 update"
+    baseline:
+      - url: "https://example.com/pci-dss-4.0.pdf"
+        title: "PCI DSS v4.0"
+    new:
+      - url: "https://example.com/pci-dss-4.0.1.pdf"
+        title: "PCI DSS v4.0.1"
+
+  - name: "rbi_kyc_2024"
+    description: "RBI KYC guidelines 2024 update"
+    baseline:
+      - url: "https://example.com/rbi-kyc-2023.pdf"
+        title: "RBI KYC 2023"
+    new:
+      - url: "https://example.com/rbi-kyc-2024.pdf"
+        title: "RBI KYC 2024"
+
+  - name: "demo"
+    description: "Demo scenario for testing"
+    baseline: []
+    new: []
+# Note: Replace example URLs with actual regulatory document URLs
+# Documents will be downloaded to scenarios/{name}/baseline/ and scenarios/{name}/new/

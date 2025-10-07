@@ -1,0 +1,54 @@
+# RegDelta Configuration
+# Local-first compliance impact analysis tool
+
+storage:
+  mode: json # json | sqlite (beta+)
+  data_dir: "data"
+  audit_dir: "audit"
+
+extract:
+  skip_on_error: true
+  max_empty_pages_warn: 3
+  fallback_order: ["pymupdf", "pdfplumber"]
+
+controls:
+  catalogs: ["pci.yml", "rbi_demo.yml"]
+  catalog_dir: "catalogs"
+
+mapping:
+  thresholds:
+    high: 0.75 # Auto-accept above this score
+    low: 0.60 # Review required between low-high
+  blend:
+    cosine_weight: 0.7
+    lexical_weight: 0.3
+  top_k: 5 # Number of control matches to return
+
+planner:
+  create_actions_for: ["changed", "unmapped"]
+  default_due_days: 30
+
+evidence:
+  mode: "plan" # plan | dryrun | live
+  # plan: just schedule, dryrun: simulate, live: trigger webhooks
+
+reviewer:
+  identity: "prompt" # prompt | os
+  # prompt: ask user for name, os: use system username
+
+ui:
+  framework: "streamlit"
+  theme: "dark"
+  page_title: "RegDelta - Local Compliance Impact Analysis"
+  page_icon: "📋"
+
+scenario:
+  default: "demo"
+  scenarios_dir: "scenarios"
+
+lexicon:
+  file: "lexicon.yml"
+
+logging:
+  level: "INFO" # DEBUG | INFO | WARN | ERROR
+  file: "logs/regdelta.log"

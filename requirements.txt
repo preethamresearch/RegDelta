@@ -1,0 +1,25 @@
+# RegDelta - Local Compliance Impact Analysis
+# Requirements file
+
+# Core dependencies
+pyyaml>=6.0
+pandas>=2.0.0
+numpy>=1.24.0
+
+# PDF extraction
+PyMuPDF>=1.23.0
+pdfplumber>=0.10.0
+
+# NLP and embeddings
+sentence-transformers>=2.2.2
+faiss-cpu>=1.7.4
+rapidfuzz>=3.0.0
+
+# Web UI
+streamlit>=1.28.0
+
+# HTTP requests
+requests>=2.31.0
+
+# Logging and utilities
+python-dateutil>=2.8.2

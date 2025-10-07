@@ -1,0 +1,134 @@
+# PCI DSS Control Catalog
+# Sample controls for PCI Data Security Standard
+
+controls:
+  - control_id: "PCI-1.1"
+    domain: "Network Security"
+    title: "Establish and implement firewall configuration standards"
+    description: "Install and maintain network security controls to protect account data. Firewall and router configuration standards that are documented, implemented, and reviewed at least annually."
+    owner: "Network Team"
+    evidence_examples:
+      - "Firewall configuration files"
+      - "Change management logs"
+      - "Annual review sign-off documents"
+      - "Network diagrams showing firewall placement"
+
+  - control_id: "PCI-1.2"
+    domain: "Network Security"
+    title: "Build firewall configurations to restrict inbound/outbound traffic"
+    description: "Firewalls restrict inbound and outbound traffic to that which is necessary for the cardholder data environment, and deny all other traffic."
+    owner: "Network Team"
+    evidence_examples:
+      - "Firewall ruleset documentation"
+      - "Traffic flow diagrams"
+      - "Quarterly firewall rule reviews"
+
+  - control_id: "PCI-2.1"
+    domain: "Configuration Management"
+    title: "Implement vendor security defaults and remove unnecessary accounts"
+    description: "Always change vendor-supplied defaults and remove or disable unnecessary default accounts before installing a system on the network."
+    owner: "System Administrators"
+    evidence_examples:
+      - "Hardening checklists"
+      - "Account audit logs"
+      - "Configuration baseline documents"
+
+  - control_id: "PCI-2.2"
+    domain: "Configuration Management"
+    title: "Develop configuration standards for all system components"
+    description: "Develop configuration standards for all system components. Ensure that these standards address all known security vulnerabilities and are consistent with industry-accepted system hardening standards."
+    owner: "Security Team"
+    evidence_examples:
+      - "Configuration management policy"
+      - "Hardening standards documentation"
+      - "Vulnerability assessment reports"
+
+  - control_id: "PCI-3.1"
+    domain: "Data Protection"
+    title: "Keep cardholder data storage to a minimum"
+    description: "Keep cardholder data storage to a minimum by implementing data retention and disposal policies, procedures and processes."
+    owner: "Data Privacy Officer"
+    evidence_examples:
+      - "Data retention policy"
+      - "Data inventory and classification"
+      - "Secure deletion logs"
+
+  - control_id: "PCI-3.4"
+    domain: "Data Protection"
+    title: "Render PAN unreadable anywhere it is stored"
+    description: "Render Primary Account Number (PAN) unreadable anywhere it is stored (including portable digital media, backup media, in logs) using strong cryptography, truncation, tokenization, or hashing."
+    owner: "Data Privacy Officer"
+    evidence_examples:
+      - "Encryption key management procedures"
+      - "Database encryption configuration"
+      - "Tokenization system documentation"
+
+  - control_id: "PCI-6.1"
+    domain: "Secure Development"
+    title: "Establish process to identify and rank security vulnerabilities"
+    description: "Establish a process to identify security vulnerabilities, using reputable outside sources for security vulnerability information, and assign a risk ranking to newly discovered vulnerabilities."
+    owner: "AppSec Team"
+    evidence_examples:
+      - "Vulnerability management policy"
+      - "Risk ranking methodology"
+      - "Vulnerability scan reports"
+
+  - control_id: "PCI-6.2"
+    domain: "Secure Development"
+    title: "Ensure all system components are protected from known vulnerabilities"
+    description: "Ensure that all system components and software are protected from known vulnerabilities by installing applicable vendor-supplied security patches within one month of release."
+    owner: "IT Operations"
+    evidence_examples:
+      - "Patch management logs"
+      - "System inventory with patch levels"
+      - "Monthly patching reports"
+
+  - control_id: "PCI-8.1"
+    domain: "Access Control"
+    title: "Assign unique ID to each person with computer access"
+    description: "Define and implement policies and procedures to ensure proper user identification management for non-consumer users and administrators on all system components."
+    owner: "IAM Team"
+    evidence_examples:
+      - "User access policy"
+      - "User provisioning logs"
+      - "Quarterly access reviews"
+
+  - control_id: "PCI-8.2"
+    domain: "Access Control"
+    title: "Employ multi-factor authentication for all access"
+    description: "In addition to assigning a unique ID, ensure proper user-authentication management by employing multi-factor authentication for all non-console access into the CDE."
+    owner: "IAM Team"
+    evidence_examples:
+      - "MFA implementation documentation"
+      - "Authentication logs"
+      - "MFA enrollment reports"
+
+  - control_id: "PCI-10.1"
+    domain: "Monitoring & Logging"
+    title: "Implement audit trails to link access to each user"
+    description: "Implement audit trails to link all access to system components to each individual user."
+    owner: "Security Operations"
+    evidence_examples:
+      - "Log collection configuration"
+      - "SIEM integration documentation"
+      - "Sample audit logs"
+
+  - control_id: "PCI-10.2"
+    domain: "Monitoring & Logging"
+    title: "Implement automated audit trails for all system components"
+    description: "Implement automated audit trails for all system components to reconstruct security-relevant events."
+    owner: "Security Operations"
+    evidence_examples:
+      - "Logging policy"
+      - "Log retention configuration"
+      - "Daily log review reports"
+
+  - control_id: "PCI-12.1"
+    domain: "Policy & Governance"
+    title: "Establish security policy that addresses information security"
+    description: "Establish, publish, maintain, and disseminate a security policy that addresses all PCI DSS requirements and defines information security responsibilities."
+    owner: "CISO"
+    evidence_examples:
+      - "Information security policy document"
+      - "Annual policy review records"
+      - "Policy acknowledgment forms"
