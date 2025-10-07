@@ -1,5 +1,0 @@
-# System packages for Streamlit Cloud
-# Add any system-level dependencies here
-# Example:
-# libgl1-mesa-glx
-# libglib2.0-0
